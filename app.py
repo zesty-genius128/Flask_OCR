@@ -1,5 +1,6 @@
 import pytesseract
 from PIL import Image
+from flask import Flask, request, jsonify
 
 def extract_text(image_path):
     # Open the image using PIL
@@ -13,7 +14,6 @@ def extract_text(image_path):
     return extracted_text.strip()
 
 
-from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
